@@ -116,3 +116,108 @@ print(fractional_part(5, 2)) # Should be 0.5
 print(fractional_part(5, 0)) # Should be 0
 print(fractional_part(0, 5)) # Should be 0
 input("Press enter to continue.")
+
+
+# Basic while loop example
+number = 1
+while number < 7:
+	print(number, end=" ")
+	number = number + 1
+input("Press enter to continue.")
+
+
+# Iterating a string / for in loop
+def show_letters(word):
+	for x in word:
+		print(x)
+# Should print one line per letter
+show_letters("Hello")
+input("Press enter to continue.")
+
+
+# Complete the function digits(n) that returns how many digits the number has. 
+# For example: 25 has 2 digits and 144 has 3 digits. 
+
+def digits(n):
+	count = 0
+	if n == 0:
+	  return 1;
+	while (n):
+		count += 1
+		n = int(n / 10)
+	return count
+
+print(digits(25))   # Should print 2
+print(digits(144))  # Should print 3
+print(digits(1000)) # Should print 4
+print(digits(0))    # Should print 1
+input("Press enter to continue.")
+
+#This function prints out a multiplication table (for in range(start,stop,step)) & offset "stop+1" 
+# multiplication_table(1, 3) = {[1,2,3],[4,5,6],[7,8,9]}
+def multiplication_table(start, stop):
+	for xi in range(start,stop+1):
+		for yi in range(start,stop+1):
+			print(str(xi*yi), end=" ")
+		print()
+
+multiplication_table(1, 3)
+input("Press enter to continue.")
+# Should print the multiplication table shown above
+
+
+#The counter function counts down from start to stop when start is bigger than stop, and counts up from start to stop otherwise.
+def counter(start, stop):
+	x = start
+	if start > stop:
+		return_string = "Counting down: "
+		while x >= stop:
+			return_string += str(x)
+			if x > stop:
+				return_string += ","
+			x = x-1
+	else:
+		return_string = "Counting up: "
+		while x <= stop:
+			return_string += str(x)
+			if x < stop:
+				return_string += ","
+			x = x + 1
+	return return_string
+
+print(counter(1, 10)) # Should be "Counting up: 1,2,3,4,5,6,7,8,9,10"
+print(counter(2, 1)) # Should be "Counting down: 2,1"
+print(counter(5, 5)) # Should be "Counting up: 5"
+input("Press enter to continue.")
+
+
+
+# The loop function is similar to range(), but handles the parameters somewhat differently: 
+# it takes in 3 parameters: the starting point, the stopping point, and the increment step. 
+# When the starting point is greater than the stopping point, it forces the steps to be negative. 
+# When, instead, the starting point is less than the stopping point, it forces the step to be positive. 
+# Also, if the step is 0, it changes to 1 or -1. The result is returned as a one-line, space-separated string of numbers. 
+# For example, loop(11,2,3) should return 11 8 5 and loop(1,5,0) should return 1 2 3 4. 
+
+def loop(start, stop, step):
+	return_string = ""
+	if step == 0:
+		step = 1;
+	if start > stop:
+		step = abs(step) * -1
+	else:
+		step = abs(step)
+	for count in range(start,stop,step):
+		return_string += str(count) + " "
+	return return_string.strip()
+
+print(loop(11,2,3)) # Should be 11 8 5
+print(loop(1,5,0)) # Should be 1 2 3 4
+print(loop(-1,-2,0)) # Should be -1
+print(loop(10,25,-2)) # Should be 10 12 14 16 18 20 22 24 
+print(loop(1,1,1)) # Should be empty
+input("Press enter to continue.")
+
+
+
+
