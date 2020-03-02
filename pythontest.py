@@ -1,5 +1,19 @@
 print("hello world")
 
+# using format option in a simple string 
+print ("{}, A computer science portal for geeks."
+                        .format("GeeksforGeeks")) 
+# The values passed as parameters 
+# are replaced in order of their entry 
+print ("This is {} {} {} {}"
+       .format("one", "two", "three", "four"))   
+# Keyword arguments are called 
+# by their keyword name 
+print("{gfg} is a {0} science portal for {1}"
+.format("computer", "geeks", gfg ="GeeksforGeeks")) 
+# check the links to read more about formatting (i.e. float, int, hex, octal, bin... etc) and forcing style (right align, etc)
+# https://www.geeksforgeeks.org/python-format-function/
+
 
 # Complete the function by filling in the missing parts. The color_translator function receives the name of a color, 
 # then prints its hexadecimal value. Currently, it only supports the three additive primary colors (red, green, blue), 
@@ -329,7 +343,5 @@ print(count_letters("AaBbCc")) # Should be {'a': 2, 'b': 2, 'c': 2}
 print(count_letters("Math is fun! 2+2=4")) # Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
 print(count_letters("This is a sentence.")) # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
 input("Press enter to continue.")
-
-
 
 
