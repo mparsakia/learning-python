@@ -344,4 +344,3 @@ print(count_letters("Math is fun! 2+2=4")) # Should be {'m': 1, 'a': 1, 't': 1, 
 print(count_letters("This is a sentence.")) # Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
 input("Press enter to continue.")
 
-
